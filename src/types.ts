@@ -47,3 +47,10 @@ export type Profile = {
   id: string;
   group: string;
 };
+
+export type Tables = {
+  id: number;
+  image: string | null;
+  name: string;
+  price: number;
+};

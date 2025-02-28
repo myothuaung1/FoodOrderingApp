@@ -1,15 +1,21 @@
-import Colors from '@/src/constants/Colors';
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
+import Colors from '@/src/constants/Colors';
+import { Tables } from '../types';
 import { Product } from '../types';
 import { Link, useSegments } from 'expo-router';
+import RemoteImage from './RemoteImage';
 
 
 //const product = products [1];
 export const defaultPizzaImage = 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/default.png';
 
 type ProductListItemProps = {
+  product: Tables<'products'>;
+};
+
+/*type ProductListItemProps = {
     product: Product;
-}
+}*/
 
 const ProductListItem = ({product}:ProductListItemProps) => {
   const segments = useSegments();
